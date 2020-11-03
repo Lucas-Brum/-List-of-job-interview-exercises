@@ -18,4 +18,4 @@ You can also add solutions for exercises already solved here however in other
 languages and if you can make code better, please add new a new script with 
 resolutions for the exercises.
 
-Thank you for you contribution! ❤️
+<b>Thank you for you contribution!</b> ❤️
