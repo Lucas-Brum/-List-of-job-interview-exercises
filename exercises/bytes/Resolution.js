@@ -1,4 +1,4 @@
-let quantidadeDeBytes = 1000
+let quantidadeDeBytes = 2549
 const kyloByte = 1024
 const megaByte = kyloByte * 1000
 const gigaByte = megaByte * 1000
@@ -8,8 +8,7 @@ const exaByte = petaByte * 1000
 const zetaByte = exaByte * 1000
 const Yottabyte = zetaByte * 1000
 let legenda = determinaLegenda(quantidadeDeBytes)
-let valorFinal = ajustarValor(quantidadeDeBytes,legenda)
-
+let valorFinal = ajustarValor(quantidadeDeBytes,legenda) % 1 === 0 ? ajustarValor(quantidadeDeBytes,legenda) : ajustarValor(quantidadeDeBytes,legenda).toFixed(2)
 
 
 
@@ -52,24 +51,24 @@ function ajustarValor(bytes,legenda) {
         case 'KB':
             return bytes / 1024
         case 'MB':
-            return ((bytes / kyloByte) / 1024)
+            return (bytes / kyloByte) / 1024
         case 'GB':
-            return ((bytes / megaByte) / 1024)
+            return (bytes / megaByte) / 1024
         case 'TB':
-            return ((bytes / gigaByte) / 1024)
+            return (bytes / gigaByte) / 1024
         case 'PB':
-            return ((bytes / teraByte) / 1024)
+            return (bytes / teraByte) / 1024
         case 'EB':
-            return ((bytes / petaByte) / 1024)
+            return (bytes / petaByte) / 1024
         case 'ZB':
-            return ((bytes / exaByte) / 1024)
+            return (bytes / exaByte) / 1024
         case 'YB':
-            return ((bytes / zetaByte) / 1024)
+            return (bytes / zetaByte) / 1024
         default:
-            return 'Erro:'
+            return 'Erro: '
 
     }
         
 }
-console.log(`${valorFinal} ${legenda}`)
+console.log(`${valorFinal}${legenda}`)
  
